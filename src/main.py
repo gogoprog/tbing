@@ -360,9 +360,12 @@ def main():
     parser.add_argument('dir', help='Target directory', default='.', nargs='?')
     args = parser.parse_args()
 
-    global bindings_path;
+    global bindings_path
     if args.dir:
-        bindings_path = os.getcwd() + "/" + args.dir + "/"
+        if os.path.isabs(args.dir):
+            bindings_path = args.dir + "/"
+        else:
+            bindings_path = os.getcwd() + "/" + args.dir + "/"
 
     global context
     os.chdir(bindings_path)
