@@ -1,0 +1,16 @@
+#include "embindcefv8.h"
+
+{{#headers}}
+#include <{{.}}>
+{{/headers}}
+
+EMBINDCEFV8_BINDINGS(mypackage)
+{
+    {{#classes}}
+    embindcefv8::Class<{{class_name}}>("{{class_name}}")
+        {{#methods}}
+        .method("{{method_other_name_camel_case}}", static_cast<{{{result_full_type}}} ({{class_name}}::*)({{#arguments}}{{{argument_full_type}}}{{comma}}{{/arguments}}){{method_const_qualifier}}>(&{{class_name}}::{{method_name}}))
+        {{/methods}}
+        ;
+    {{/classes}}
+}

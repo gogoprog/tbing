@@ -1,0 +1,29 @@
+[
+    {
+        "root": "",
+        "include-relative": ".",
+        "include-dirs": [
+        ],
+        "files": [
+            "*.h"
+        ],
+        "excluded-files": [
+        ],
+        "output":[
+            {
+                "template": "templates/class.hx.mustache",
+                "rule": "file-per-class",
+                "path": "generated/haxe/{{class_name}}.hx",
+                "types": {
+                }
+            },
+            {
+                "template": "templates/bindings.cpp.mustache",
+                "rule": "single-file",
+                "path": "generated/cpp/bindings.cpp"
+            }
+        ],
+        "excluded-types":[
+        ]
+    }
+]

@@ -367,6 +367,8 @@ def main():
         else:
             bindings_path = os.getcwd() + "/" + args.dir + "/"
 
+    print(bindings_path)
+
     global context
     os.chdir(bindings_path)
 
@@ -380,5 +382,3 @@ def main():
         end_generation(rule)
 
     print("[tbing] Done!")
-
-main()
