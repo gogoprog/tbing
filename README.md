@@ -1,2 +1,2 @@
 # tbing
-Templates-based bindings generator for C++
+Templates-based bindings and interfaces generator for C++
