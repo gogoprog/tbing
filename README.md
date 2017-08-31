@@ -1,6 +1,10 @@
 # tbing
 Templates-based bindings and interfaces generator for C++
 
+### Info
+
+tbing uses libclang to extract classes and functions information and then uses pystache (mustache) to generate files. This project has been initially made to generate the bindings for the [gengine](https://github.com/gogoprog/gengine/) project.
+
 ### Example
 
 Create and fill the rules.json file:
