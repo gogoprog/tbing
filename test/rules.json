@@ -18,9 +18,14 @@
                 }
             },
             {
-                "template": "templates/bindings.cpp.mustache",
+                "template": "templates/embindcefv8.cpp.mustache",
                 "rule": "single-file",
-                "path": "generated/cpp/bindings.cpp"
+                "path": "generated/cpp/embindcefv8_bindings.cpp"
+            },
+            {
+                "template": "templates/emscripten.cpp.mustache",
+                "rule": "single-file",
+                "path": "generated/cpp/emscripten_bindings.cpp"
             }
         ],
         "excluded-types":[

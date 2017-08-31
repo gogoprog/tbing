@@ -1,0 +1,12 @@
+#include <emscripten/bind.h>
+using namespace emscripten;
+
+EMSCRIPTEN_BINDINGS(my_module) {
+    {{#classes}}
+    class_<{{class_name}}>("{{class_name}}")
+        {{#methods}}
+        .function("{{method_other_name_camel_case}}", &{{class_name}}::{{method_name}})
+        {{/methods}}
+        ;
+    {{/classes}}
+}
